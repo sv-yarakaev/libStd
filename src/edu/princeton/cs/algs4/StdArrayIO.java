@@ -1,52 +1,4 @@
-/******************************************************************************
- *  Compilation:  javac StdArrayIO.java
- *  Execution:    java StdArrayIO < input.txt
- *  Dependencies: StdOut.java
- *  Data files:    https://introcs.cs.princeton.edu/java/22library/tinyDouble1D.txt
- *                 https://introcs.cs.princeton.edu/java/22library/tinyDouble2D.txt
- *                 https://introcs.cs.princeton.edu/java/22library/tinyBoolean2D.txt
- *
- *  A library for reading in 1D and 2D arrays of integers, doubles,
- *  and booleans from standard input and printing them out to
- *  standard output.
- *
- *  % more tinyDouble1D.txt
- *  4
- *    .000  .246  .222  -.032
- *
- *  % more tinyDouble2D.txt
- *  4 3
- *    .000  .270  .000
- *    .246  .224 -.036
- *    .222  .176  .0893
- *   -.032  .739  .270
- *
- *  % more tinyBoolean2D.txt
- *  4 3
- *    1 1 0
- *    0 0 0
- *    0 1 1
- *    1 1 1
- *
- *  % cat tinyDouble1D.txt tinyDouble2D.txt tinyBoolean2D.txt | java StdArrayIO
- *  4
- *    0.00000   0.24600   0.22200  -0.03200
- *
- *  4 3
- *    0.00000   0.27000   0.00000
- *    0.24600   0.22400  -0.03600
- *    0.22200   0.17600   0.08930
- *    0.03200   0.73900   0.27000
- *
- *  4 3
- *  1 1 0
- *  0 0 0
- *  0 1 1
- *  1 1 1
- *
- ******************************************************************************/
-
-        package edu.princeton.cs.algs4;
+package edu.princeton.cs.algs4;
 
 
 /**
@@ -186,9 +138,10 @@ public class StdArrayIO {
         int m = a.length;
         int n = a[0].length;
         StdOut.println(m + " " + n);
-        for (int i = 0; i < m; i++) {
+        for (int i = 0; i < a.length; i++) {
+            int[] ints = a[i];
             for (int j = 0; j < n; j++) {
-                StdOut.printf("%9d ", a[i][j]);
+                StdOut.printf("%9d ", ints[j]);
             }
             StdOut.println();
         }
@@ -285,7 +238,7 @@ public class StdArrayIO {
 
 }
 
-    /******************************************************************************
+/******************************************************************************
      *  Copyright 2002-2018, Robert Sedgewick and Kevin Wayne.
      *
      *  This file is part of algs4.jar, which accompanies the textbook
@@ -307,7 +260,7 @@ public class StdArrayIO {
      *
      *  You should have received a copy of the GNU General Public License
      *  along with algs4.jar.  If not, see http://www.gnu.org/licenses.
-     ******************************************************************************/
+******************************************************************************/
 
 
 
